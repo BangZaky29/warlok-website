@@ -38,13 +38,30 @@ export const Footer: FC = () => {
             <p className="text-slate-400 mb-6 leading-relaxed text-sm">
               Solusi digital terpercaya untuk transformasi lingkungan RT/RW dan komunitas Anda menjadi lebih modern dan transparan.
             </p>
-            <div className="flex space-x-4">
-              <a href="https://www.instagram.com/nuansalegal.id/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-[#E4405F] hover:text-white transition-all shadow-lg hover:shadow-[#E4405F]/20">
-                <Instagram size={18} />
-              </a>
-              <a href="https://www.tiktok.com/@nuansalegal.id?lang=id-ID" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-black hover:text-white transition-all shadow-lg hover:shadow-black/20">
-                <TikTokIcon size={18} />
-              </a>
+            <div className="space-y-4">
+              <div className="flex flex-col space-y-2">
+                <span className="text-xs font-bold text-slate-500 uppercase tracking-tighter">Nuansa Legal:</span>
+                <div className="flex space-x-3">
+                  <a href="https://www.instagram.com/nuansalegal.id/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-[#E4405F] hover:text-white transition-all shadow-lg hover:shadow-[#E4405F]/20" title="Instagram Nuansa Legal">
+                    <Instagram size={14} />
+                  </a>
+                  <a href="https://www.tiktok.com/@nuansalegal.id?lang=id-ID" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-black hover:text-white transition-all shadow-lg hover:shadow-black/20" title="TikTok Nuansa Legal">
+                    <TikTokIcon size={14} />
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex flex-col space-y-2">
+                <span className="text-xs font-bold text-slate-500 uppercase tracking-tighter">Nuansa Solution:</span>
+                <div className="flex space-x-3">
+                  <a href="https://www.instagram.com/nuansasolution.id/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-[#E4405F] hover:text-white transition-all shadow-lg hover:shadow-[#E4405F]/20" title="Instagram Nuansa Solution">
+                    <Instagram size={14} />
+                  </a>
+                  <a href="https://www.tiktok.com/@nuansasolution.id" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-black hover:text-white transition-all shadow-lg hover:shadow-black/20" title="TikTok Nuansa Solution">
+                    <TikTokIcon size={14} />
+                  </a>
+                </div>
+              </div>
             </div>
           </motion.div>
 
@@ -129,8 +146,36 @@ export const Footer: FC = () => {
             &copy; {new Date().getFullYear()} <span className="text-slate-400 font-medium">Nuansa Solution</span>. All rights reserved.
           </p>
           <div className="flex space-x-6">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a
+              href="#privacy"
+              onClick={(e) => {
+                e.preventDefault();
+                window.dispatchEvent(new CustomEvent('app-navigate', { detail: 'privacy' }));
+              }}
+              className="hover:text-white transition-colors"
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="#security"
+              onClick={(e) => {
+                e.preventDefault();
+                window.dispatchEvent(new CustomEvent('app-navigate', { detail: 'security' }));
+              }}
+              className="hover:text-white transition-colors"
+            >
+              Security
+            </a>
+            <a
+              href="#terms"
+              onClick={(e) => {
+                e.preventDefault();
+                window.dispatchEvent(new CustomEvent('app-navigate', { detail: 'terms' }));
+              }}
+              className="hover:text-white transition-colors"
+            >
+              Terms of Service
+            </a>
           </div>
         </div>
       </div>

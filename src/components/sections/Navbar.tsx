@@ -19,7 +19,14 @@ export const Navbar: FC = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="#" className="text-2xl font-bold text-blue-600 tracking-tight">
+            <a
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                window.dispatchEvent(new CustomEvent('app-navigate', { detail: 'home' }));
+              }}
+              className="text-2xl font-bold text-blue-600 tracking-tight"
+            >
               WARLOK
             </a>
           </div>
