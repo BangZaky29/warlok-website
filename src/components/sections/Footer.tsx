@@ -116,13 +116,13 @@ export const Footer: FC = () => {
             <ul className="space-y-4">
               <li className="flex items-start group">
                 <a
-                  href="https://wa.me/6289644448721"
+                  href="https://wa.me/6288213728307"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start hover:text-green-400 transition-colors"
                 >
                   <WhatsAppIcon size={18} className="mr-3 mt-1 flex-shrink-0 text-green-500 group-hover:scale-110 transition-transform" />
-                  <span className="text-sm border-b border-transparent hover:border-green-400">0896-4444-8721</span>
+                  <span className="text-sm border-b border-transparent hover:border-green-400">+62 88213728307</span>
                 </a>
               </li>
               <li className="flex items-start group">
