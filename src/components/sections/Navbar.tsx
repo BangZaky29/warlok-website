@@ -3,6 +3,7 @@ import type { FC } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '../ui/Button';
+import warlokLogo from '../../assets/warlok_2000x2000_Transparant_1.png';
 
 export const Navbar: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,9 +26,13 @@ export const Navbar: FC = () => {
                 e.preventDefault();
                 window.dispatchEvent(new CustomEvent('app-navigate', { detail: 'home' }));
               }}
-              className="text-2xl font-bold text-blue-600 tracking-tight"
+              className="flex items-center"
             >
-              WARLOK
+              <img
+                src={warlokLogo}
+                alt="WARLOK"
+                className="h-10 w-auto object-contain hover:opacity-80 transition-opacity"
+              />
             </a>
           </div>
 
