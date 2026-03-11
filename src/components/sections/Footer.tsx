@@ -143,7 +143,7 @@ export const Footer: FC = () => {
 
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
           <p className="mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} <span className="text-slate-400 font-medium">Nuansa Solution</span>. All rights reserved.
+            &copy; 2022 <span className="text-slate-400 font-medium">Nuansa Solution</span>. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <a
